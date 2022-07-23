@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="single">
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="frontmatter">
+        {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+
+        <p class="date">
+            Published on
+            <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}</time>
+        </p>
+
+        <hr/>
+    </div>
+    
+    {{ .Content }}
+</article>
+{{ end }}

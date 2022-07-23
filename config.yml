@@ -1,0 +1,22 @@
+title: Matt Crook
+baseURL: https://mattcrook.io
+languageCode: en-NZ
+
+enableRobotsTXT: true
+canonifyURLs: true
+
+paginate: 8
+paginatePath: p
+summaryLength: 10
+
+sectionPagesMenu: main
+menu:
+  footer:
+    - name: GitHub
+      url: https://github.com/crookm
+    - name: Twitter
+      url: https://twitter.com/mattlc_3
+
+module:
+  imports:
+  - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5

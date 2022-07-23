@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="True">
+
+<title>{{ with .Title }}{{ . | lower }} &ndash; {{end}}{{ .Site.Title | lower }}</title>
+
+{{ $cssOptions := (dict "outputStyle" "compressed") }}
+{{ $css := resources.Get "scss/main.scss" | resources.ToCSS $cssOptions | resources.Fingerprint "sha512" -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{ end }}
