@@ -8,8 +8,8 @@
   <a href="{{- with .Get "link" -}}{{ .Get "link" }}{{- else -}}{{ $img.RelPermalink }}{{- end -}}">
     <picture>
       <source type="{{ $imgWebpDesktop.MediaType }}" srcset="{{ $imgWebpDesktop.RelPermalink }}" media="(min-width: 530px)" />
-      <source type="{{ $imgWebpMobile.MediaType }}" srcset="{{ $imgWebpMobile.RelPermalink }}" media="(max-width: 360px)" />
-      <source type="{{ $imgPngMobile.MediaType }}" srcset="{{ $imgPngMobile.RelPermalink }}" media="(max-width: 360px)" />
+      <source type="{{ $imgWebpMobile.MediaType }}" srcset="{{ $imgWebpMobile.RelPermalink }}" media="(max-width: 380px)" />
+      <source type="{{ $imgPngMobile.MediaType }}" srcset="{{ $imgPngMobile.RelPermalink }}" media="(max-width: 380px)" />
       
       <img src="{{ $imgPngDefault.RelPermalink }}" class="figure-img img-fluid img-thumbnail"
         {{- if or (.Get "alt") (.Get "caption") }}
