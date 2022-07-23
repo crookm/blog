@@ -1,0 +1,11 @@
+{{ if gt .TotalPages 1 }}
+<p class="clearfix">
+    {{ if .HasPrev }}
+    <a href="{{ .Prev.URL }}">&larr; Prev</a>
+    {{ end }}
+
+    {{ if .HasNext }}
+    <a style="float:right;" href="{{ .Next.URL }}">Next &rarr;</a>
+    {{ end }}
+</p>
+{{ end }}

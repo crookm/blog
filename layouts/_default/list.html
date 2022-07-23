@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{ with .Content }}
+        <section>{{ . }}</section>
+    {{ end }}
+
+    {{ $paginator := .Paginator }}
+    {{ range $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "paginator.html" $paginator }}
+{{ end }}

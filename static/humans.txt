@@ -1,0 +1,11 @@
+/* TEAM */
+	Developer: Matthew Crook
+	Twitter: @mattlc_3
+	From: Auckland, New Zealand
+
+/* SITE */
+	Last update: 2022-07-23
+	Language: English
+	Development: JetBrains Rider, Linux Mint
+	Runtime: Hugo
+	Hosting: CloudFlare Pages

@@ -1,0 +1,143 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/helpers";
+
+@import "bootstrap/grid";
+@import "bootstrap/images";
+
+html,
+body {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dashed #c3c3c3;
+}
+
+.innerwidth {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.readon {
+  display: inline-block;
+}
+
+nav .menu,
+footer .menu {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+nav .menu > li,
+footer .menu > li {
+  display: inline-block;
+}
+
+nav .menu > li:not(:last-of-type)::after,
+footer .menu > li:not(:last-of-type)::after {
+  content: "/";
+  margin-left: 4px;
+}
+
+nav > div:nth-of-type(2) {
+  margin-top: 9px;
+  font-size: 12px;
+  text-align: center;
+}
+
+nav hr {
+  border: none;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+main {
+  margin: 20px auto !important;
+}
+
+pre {
+  font-family: monospace;
+  overflow: auto;
+  padding: 10px;
+  background: #f2f2f2;
+}
+
+.lead {
+  margin: 2px 0 0;
+}
+
+h1.title,
+.bio > h1 {
+  margin: 0;
+}
+
+article.single .figure {
+  margin: 0;
+}
+
+article.single .figure img {
+  max-width: calc(100% - 9px);
+}
+
+article.single .figure .figure-caption {
+  margin-top: -10px;
+}
+
+article.single .date {
+  color: #666;
+  font-size: 12px;
+}
+
+article.single .bleb {
+  margin: 0 0 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #000;
+    color: #dbdbdb;
+  }
+
+  a:not(:active) {
+    color: #88f;
+  }
+
+  a:visited {
+    color: #bc73ff;
+  }
+
+  pre {
+    background: #373737;
+  }
+
+  hr,
+  nav hr {
+    border-color: #444;
+  }
+
+  article.single .date {
+    color: #959595;
+  }
+
+  article.single img {
+    opacity: 0.75;
+  }
+
+  article.single img:hover {
+    opacity: 1;
+  }
+}

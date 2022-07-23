@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ with .Content }}
+<div class="row">
+    {{ with resources.Get "img/me.jpg" }}
+    <div class="col-auto">
+        {{ $imgWebp := .Resize "72x webp photo q90" }}
+        {{ $imgJpg := .Resize "72x jpg q90" }}
+        <picture>
+            <source type="{{ $imgWebp.MediaType }}" srcset="{{ $imgWebp.RelPermalink }}" />
+            <img src="{{ $imgJpg.RelPermalink }}" alt="A picture of me" class="img-thumbnail" width="{{ $imgJpg.Width }}"
+                height="{{ $imgJpg.Height }}" />
+        </picture>
+    </div>
+    {{ end }}
+    <div class="col bio">
+        {{ . }}
+    </div>
+</div>
+{{ end }}
+
+<hr />
+
+{{ with .Site.GetPage "journal" }}
+<h2>Recent posts</h2>
+
+{{ range first 3 .Pages }}
+    {{ .Render "li" }}
+{{ end }}
+
+<p class="clearfix">
+    <a style="float: right;" href="{{ .RelPermalink }}">
+        View all &rarr;
+    </a>
+</p>
+{{ end }}
+
+{{ end }}
