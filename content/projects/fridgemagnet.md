@@ -13,6 +13,7 @@ javascript:
 - https://matt-fridgemagnet.pages.dev/_framework/blazor.webassembly.js
 
 date: 2022-02-18T08:41:48+12:00
+draft: true
 ---
 
 {{< rawhtml >}}
