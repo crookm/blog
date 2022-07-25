@@ -3,6 +3,7 @@
 
 <head>
 {{ partial "head.html" . -}}
+{{- block "extra head" . }}{{- end }}
 </head>
 
 <body>
@@ -15,6 +16,7 @@
     </main>
 
     {{ partial "footer.html" . }}
+    {{- block "javascript" . }}{{ end -}}
 </body>
 
 </html>

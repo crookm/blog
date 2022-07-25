@@ -3,7 +3,7 @@
         <section>{{ . }}</section>
     {{ end }}
 
-    {{ $paginator := .Paginator }}
+    {{ $paginator := .Paginate .Pages }}
     {{ range $paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}

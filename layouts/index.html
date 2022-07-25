@@ -34,4 +34,18 @@
 </p>
 {{ end }}
 
+{{ with .Site.GetPage "projects" }}
+<h2>Recent projects</h2>
+
+{{ range first 3 .Pages }}
+    {{ .Render "li" }}
+{{ end }}
+
+<p class="clearfix">
+    <a style="float: right;" href="{{ .RelPermalink }}">
+        View all &rarr;
+    </a>
+</p>
+{{ end }}
+
 {{ end }}

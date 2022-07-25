@@ -1,0 +1,39 @@
+{{ define "extra head" }}
+{{ with .Params.baseHref }}
+<base href="{{ . }}" />
+{{ end }}
+
+{{ range .Params.stylesheets }}
+    <link rel="stylesheet" href="{{ . }}">
+{{ end }}
+{{ end }}
+
+{{ define "javascript" }}
+{{ range .Params.javascript }}
+    <script type="application/javascript" src="{{ . }}"></script>
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<article class="single">
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="frontmatter">
+        {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+
+        <p class="date">
+            Published on
+            <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}</time>
+        </p>
+
+        <hr/>
+    </div>
+    
+    {{ with .Content }}
+        {{ . }}
+        <hr/>
+    {{ end }}
+    
+    <br/>
+    <div class="app">Loading...</div>
+</article>
+{{ end }}
