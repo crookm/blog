@@ -1,8 +1,5 @@
-{{ define "extra head" }}
-{{ with .Params.baseHref }}
-<base href="{{ . }}" />
-{{ end }}
-
+{{ define "stylesheets" }}
+{{ with .Params.baseHref }}<base href="{{ . }}" />{{ end }}
 {{ range .Params.stylesheets }}
     <link rel="stylesheet" href="{{ . }}">
 {{ end }}
@@ -28,12 +25,7 @@
         <hr/>
     </div>
     
-    {{ with .Content }}
-        {{ . }}
-        <hr/>
-    {{ end }}
-    
-    <br/>
-    <div class="app">Loading...</div>
+    <br />
+    {{ .Content }}
 </article>
 {{ end }}

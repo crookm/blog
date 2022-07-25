@@ -9,7 +9,12 @@ baseHref: https://matt-fridgemagnet.pages.dev/
 stylesheets:
 - https://matt-fridgemagnet.pages.dev/FridgeMagnet.Web.styles.css
 javascript:
+- https://matt-fridgemagnet.pages.dev/_content/Microsoft.AspNetCore.Components.CustomElements/BlazorCustomElements.js
 - https://matt-fridgemagnet.pages.dev/_framework/blazor.webassembly.js
 
 date: 2022-02-18T08:41:48+12:00
 ---
+
+{{< rawhtml >}}
+<fridgemagnet-calculator></fridgemagnet-calculator>
+{{< /rawhtml >}}
