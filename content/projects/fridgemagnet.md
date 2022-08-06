@@ -2,6 +2,7 @@
 title: Fridge Magnet
 
 projectFrame: https://matt-fridgemagnet.pages.dev
+projectFrameMinHeight: 218px
 
 date: 2022-02-18T08:41:48+12:00
 ---
