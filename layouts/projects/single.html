@@ -1,13 +1,11 @@
-{{ define "stylesheets" }}
-{{ with .Params.baseHref }}<base href="{{ . }}" />{{ end }}
-{{ range .Params.stylesheets }}
-    <link rel="stylesheet" href="{{ . }}">
-{{ end }}
-{{ end }}
-
 {{ define "javascript" }}
-{{ range .Params.javascript }}
-    <script type="application/javascript" src="{{ . }}"></script>
+{{ with .Params.projectFrame }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"
+        integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    iFrameResize();
+</script>
 {{ end }}
 {{ end }}
 
@@ -22,10 +20,13 @@
             <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}</time>
         </p>
 
-        <hr/>
+        <hr>
     </div>
-    
-    <br />
+
     {{ .Content }}
+    
+    {{ with .Params.projectFrame }}
+    <iframe src="{{ . }}" style="width: 100%; border: none;"></iframe>
+    {{ end }}
 </article>
 {{ end }}
