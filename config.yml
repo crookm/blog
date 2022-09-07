@@ -9,8 +9,21 @@ paginate: 8
 paginatePath: p
 summaryLength: 10
 
-sectionPagesMenu: main
 menu:
+  main:
+    - name: journal
+      url: /journal/
+    - name: projects
+      url: /projects/
+  
+  journal:
+    - name: Index
+      url: /journal/
+      weight: 1
+    - name: Archive
+      url: /archives/journal/
+      weight: 2
+
   footer:
     - name: GitHub
       url: https://github.com/crookm

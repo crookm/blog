@@ -1,11 +1,9 @@
-<nav>
-    <div class="innerwidth">
-        <ul class="menu">
-            <li><strong><a href="/">{{ .Site.Title | lower }}</a></strong></li>
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | lower }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
-    <hr />
-</nav>
+<div class="innerwidth">
+    <ul class="menu">
+        <li><strong><a href="/">{{ .Site.Title | lower }}</a></strong></li>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | lower }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+<hr />
