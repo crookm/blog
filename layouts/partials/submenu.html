@@ -1,0 +1,8 @@
+<div class="innerwidth">
+    <ul class="submenu">
+        {{ range . }}
+        <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | lower }}</a></li>
+        {{ end }}
+    </ul>
+    <hr/>
+</div>

@@ -36,21 +36,37 @@ hr {
 }
 
 nav .menu,
+nav .submenu,
 footer .menu {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
 
+nav .submenu {
+  font-size: 12px;
+  text-align: center;
+}
+
 nav .menu > li,
+nav .submenu > li,
 footer .menu > li {
   display: inline-block;
 }
 
 nav .menu > li:not(:last-of-type)::after,
+nav .submenu > li:not(:last-of-type)::after,
+footer .menu > li:not(:last-of-type)::after {
+  margin-left: 4px;
+}
+
+nav .menu > li:not(:last-of-type)::after,
 footer .menu > li:not(:last-of-type)::after {
   content: "/";
-  margin-left: 4px;
+}
+
+nav .submenu > li:not(:last-of-type)::after {
+  content: "·";
 }
 
 nav > div:nth-of-type(2) {
