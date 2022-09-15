@@ -26,5 +26,9 @@
     </div>
 
     {{ .Content }}
+    
+    <hr style="margin: 20px 0"/>
+
+    <iframe src="https://activityhub-app.mattcrook.io/discussion?relPermalink={{ .RelPermalink }}" style="width: 100%; border: none;"></iframe>
 </article>
 {{ end }}
