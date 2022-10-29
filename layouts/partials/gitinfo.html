@@ -1,0 +1,11 @@
+{{ with .GitInfo }}
+<hr style="margin: 20px 0"/>
+
+<pre>
+commit: <a href="https://github.com/crookm/blog/commit/{{ .Hash }}" rel="noopener">{{ .Hash }}</a>
+author: {{ .AuthorName }} <{{ .AuthorEmail }}>
+date:   {{ .AuthorDate }}
+
+{{ trim .Subject "\n" }}
+</pre>
+{{ end }}
