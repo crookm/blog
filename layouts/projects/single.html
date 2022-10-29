@@ -28,5 +28,7 @@
     {{ with .Params.projectFrame }}
     <iframe src="{{ . }}" style="{{- with $.Params.projectFrameMinHeight }}min-height: {{ . }}; {{ end -}}width: 100%; border: none;"></iframe>
     {{ end }}
+
+    {{ partial "gitinfo.html" . }}
 </article>
 {{ end }}
