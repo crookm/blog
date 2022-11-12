@@ -4,7 +4,7 @@
         <ul class="menu">
             <li>&copy; {{ now.Year }}</li>
             {{ range .Site.Menus.footer }}
-            <li><a href="{{ .URL }}" rel="noopener" title="{{ .Title }}">{{ .Name | lower }}</a></li>
+            <li><a href="{{ .URL }}" rel="noopener me" title="{{ .Title }}">{{ .Name | lower }}</a></li>
             {{ end }}
         </ul>
     </div>
