@@ -28,8 +28,8 @@ menu:
   footer:
     - name: GitHub
       url: https://github.com/crookm
-    - name: Twitter
-      url: https://twitter.com/mattlc_3
+    - name: Mastodon
+      url: https://mastodon.nz/@matt
 
 module:
   imports:
