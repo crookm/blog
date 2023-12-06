@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ with .Content }}
-<div class="row">
+<div class="row" style="max-width: 100%;">
     {{ with resources.Get "image/me.jpg" }}
     <div class="col-auto">
         {{ $imgWebp := .Resize "72x webp photo q90" }}
