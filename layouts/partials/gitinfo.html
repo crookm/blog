@@ -2,9 +2,9 @@
 <hr style="margin: 20px 0"/>
 
 <pre>
-commit: <a href="https://github.com/crookm/blog/commit/{{ .Hash }}" rel="noopener">{{ .Hash }}</a>
+commit: <a href="https://github.com/crookm/blog/commit/{{ .Hash }}" rel="noopener">{{ .AbbreviatedHash }}</a>
 author: {{ .AuthorName }}
-date:   {{ .AuthorDate }}
+date:   {{ .AuthorDate.Format "2006-01-02T15:04:05-0700" }}
 
 {{ trim .Subject "\n" }}
 </pre>
