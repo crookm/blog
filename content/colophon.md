@@ -11,9 +11,8 @@ a list of the tools I use to create and host it.
 * [Bootstrap 5](https://getbootstrap.com/)
 
 ### Developer tooling and monitoring
-* [JetBrains Rider](https://www.jetbrains.com/rider/)
-* [CloudFlare Insights](https://www.cloudflare.com/insights/)
-* [Trello](https://trello.com/)
+* [Cloudflare Insights](https://www.cloudflare.com/insights/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Infrastructure
-* [CloudFlare Pages](https://pages.cloudflare.com/)
+* [Cloudflare Pages](https://pages.cloudflare.com/)

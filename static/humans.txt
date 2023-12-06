@@ -6,6 +6,6 @@
 /* SITE */
 	Last update: 2023-12-06
 	Language: English
-	Development: JetBrains Rider, Linux Mint
+	Development: Visual Studio Code, Linux Mint
 	Runtime: Hugo
 	Hosting: Cloudflare Pages
