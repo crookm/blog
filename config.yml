@@ -1,28 +1,42 @@
 title: Matt Crook
-baseURL: https://mattcrook.io
 languageCode: en-NZ
 
 enableGitInfo: true
 enableRobotsTXT: true
 canonifyURLs: true
+enableInlineShortcodes: true
 
-paginate: 8
+paginate: 10
 paginatePath: p
 summaryLength: 10
 
+uglyURLs: true
+permalinks:
+  posts: "/posts/:year/:slug"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+markup:
+  highlight:
+    guessSyntax: false
+    codeFences: true
+    noClasses: true
+
 menu:
   main:
-    - name: journal
-      url: /journal/
+    - name: posts
+      url: /posts.html
     - name: projects
-      url: /projects/
+      url: /projects.html
   
-  journal:
+  posts:
     - name: Index
-      url: /journal/
+      url: /posts.html
       weight: 1
     - name: Archive
-      url: /archives/journal/
+      url: /archives/posts.html
       weight: 2
 
   footer:

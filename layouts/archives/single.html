@@ -1,6 +1,6 @@
 {{ define "submenu" }}
-{{ if eq .Params.archiveType "journal" }}
-    {{ partial "submenu.html" .Site.Menus.journal }}
+{{ if eq .Params.archiveType "posts" }}
+    {{ partial "submenu.html" .Site.Menus.posts }}
 {{ end }}
 {{ end }}
 
