@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ with .Content }}
 <div class="row">
-    {{ with resources.Get "img/me.jpg" }}
+    {{ with resources.Get "image/me.jpg" }}
     <div class="col-auto">
         {{ $imgWebp := .Resize "72x webp photo q90" }}
         {{ $imgJpg := .Resize "72x jpg q90" }}
@@ -20,7 +20,7 @@
 
 <hr />
 
-{{ with .Site.GetPage "journal" }}
+{{ with .Site.GetPage "posts" }}
 <h2>Recent posts</h2>
 
 {{ range first 3 .Pages }}

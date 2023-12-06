@@ -1,11 +1,11 @@
 /* TEAM */
 	Developer: Matthew Crook
-	Twitter: @mattlc_3
+	Mastodon: @matt@mastodon.nz 
 	From: Auckland, New Zealand
 
 /* SITE */
-	Last update: 2022-07-23
+	Last update: 2023-12-06
 	Language: English
 	Development: JetBrains Rider, Linux Mint
 	Runtime: Hugo
-	Hosting: CloudFlare Pages
+	Hosting: Cloudflare Pages
