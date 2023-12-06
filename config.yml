@@ -25,16 +25,16 @@ markup:
 menu:
   main:
     - name: posts
-      url: /posts
+      url: /posts/
     - name: projects
-      url: /projects
+      url: /projects/
   
   posts:
     - name: Index
-      url: /posts
+      url: /posts/
       weight: 1
     - name: Archive
-      url: /archives/posts
+      url: /archives/posts/
       weight: 2
 
   footer:
