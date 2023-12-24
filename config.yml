@@ -1,5 +1,6 @@
 title: Matt Crook
 languageCode: en-NZ
+baseURL: https://mattcrook.io/
 
 enableGitInfo: true
 enableRobotsTXT: true
