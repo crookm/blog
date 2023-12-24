@@ -116,14 +116,16 @@ article.single .figure .figure-caption {
   margin-top: -10px;
 }
 
-article.single .date {
+article.single .properties {
   color: #666;
   font-size: 12px;
+  margin-top: 12px;
 }
 
-article.single .bleb {
-  margin: 0 0 10px;
+article.single .properties p {
+  margin: 4px 0;
 }
+
 
 @media (prefers-color-scheme: dark) {
   html,
