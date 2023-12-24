@@ -7,7 +7,7 @@ tags:
   - blogging
 ---
 
-I recently [decided to streamline my personal projects](/posts/2021/scaling-back-side-projects/) and combine my personal and professional blogs into one platform: Listed. Listed is a cool feature of the Standard Notes app that I use - it lets you publish blog posts to a website from a note.
+I recently [decided to streamline my personal projects](/posts/2022/scaling-back-side-projects/) and combine my personal and professional blogs into one platform: Listed. Listed is a cool feature of the Standard Notes app that I use - it lets you publish blog posts to a website from a note.
 
 However, I noticed some drawbacks of using Listed: it is not very fast, it sometimes goes offline, and it does not give me any insights into my site traffic. According to Listed, the purpose of their platform is to [create a space for journaling](https://listed.to/@Listed/5063/what-will-you-write-about), not for hosting important websites.
 
