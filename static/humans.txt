@@ -1,11 +1,12 @@
 /* TEAM */
-	Developer: Matthew Crook
-	Mastodon: @matt@mastodon.nz 
-	From: Auckland, New Zealand
+Developer: Matthew Crook
+Site: https://mattcrook.io
+Mastodon: @matt@mastodon.nz
+Location: Auckland, New Zealand
 
 /* SITE */
-	Last update: 2023-12-06
-	Language: English
-	Development: Visual Studio Code, Linux Mint
-	Runtime: Hugo
-	Hosting: Cloudflare Pages
+Last update: 2023-12-25
+Language: English
+Development: Visual Studio Code, Linux Mint
+Runtime: Hugo
+Hosting: Cloudflare Pages
