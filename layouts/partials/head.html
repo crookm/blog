@@ -6,6 +6,8 @@
 
 <title>{{ with .Title }}{{ . | lower }} &ndash; {{end}}{{ .Site.Title | lower }}</title>
 
+<link rel="canonical" href="{{ .Permalink }}">
+
 {{ $cssOptions := (dict "outputStyle" "compressed") }}
 {{ $css := resources.Get "scss/main.scss" | resources.ToCSS $cssOptions | resources.Fingerprint "sha512" -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
