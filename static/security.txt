@@ -2,16 +2,15 @@
 Hash: SHA256
 
 Contact: mailto:mattlcrook@icloud.com
-Encryption: https://mattcrook.io/pubkey.txt
-Acknowledgments: https://mattcrook.io/hall-of-fame.txt
+Expires: 2027-12-25T12:00:00+1300
 Preferred-Languages: en
+Encryption: https://mattcrook.io/pubkey.txt
 Canonical: https://mattcrook.io/security.txt
-Expires: Sat, 11 Feb 2023 12:00:00 +1300
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYIAB0WIQQuHXIR0kyLrtKo7u/UEEql9v8bawUCYg9bugAKCRDUEEql9v8b
-a8N1AQCZ2kJ7paesoxemPVpgMSemDdllo/ZbFU1H0108i7R+QwEA+jmKSNsl/1Lp
-vAcpYDtUqBQ8zkl9KMfNoOGTlvyhfQE=
-=R7si
+iHUEARYIAB0WIQQuHXIR0kyLrtKo7u/UEEql9v8bawUCZYimBAAKCRDUEEql9v8b
+a+ZeAQDv4fRoB1dvjQplo14bvhvRLgcJrACAKiIlCcoJE84gfwD+Mk8OIen6IaZ6
+l1dj6lUH6yMdfbAvraOF9eWL3ZvS/AM=
+=IfQv
 -----END PGP SIGNATURE-----
