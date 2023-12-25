@@ -1,20 +1,16 @@
 <div class="innerwidth">
-    <div class="row">
-        <div class="col">
-            <ul class="menu">
-                <li><strong><a href="/">{{ .Site.Title | lower }}</a></strong></li>
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | lower }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <ul class="menu">
+            <li><strong><a href="/">{{ .Site.Title | lower }}</a></strong></li>
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | lower }}</a></li>
+            {{ end }}
+        </ul>
 
-        <div class="col-auto">
-            <ul class="menu">
-                <li><a href="/search/" title="Search">🔎</a></li>
-            </ul>
-        </div>
-    </div>  
+        <ul class="menu">
+            <li><a href="/search/" title="Search">🔎</a></li>
+        </ul>
+    </div>
 </div>
 
 <hr />
