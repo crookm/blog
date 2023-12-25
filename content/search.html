@@ -5,12 +5,8 @@ type: page
 
 <form method="get" id="ddg-search" action="https://duckduckgo.com/">
     <input type="hidden" name="sites" value="mattcrook.io"/>
-    <div class="row">
-        <div class="col">
-            <input type="text" name="q" placeholder="Search this website…" style="width: 100%;" aria-label="Search mattcrook.io on DuckDuckGo"/>
-        </div>
-        <div class="col-auto">
-            <button type="submit">Search</button>
-        </div>
+    <div style="display: flex; column-gap: 12px;">
+        <input type="text" name="q" placeholder="Search this website…" style="width: 100%;" aria-label="Search mattcrook.io on DuckDuckGo"/>
+        <button type="submit">Search</button>
     </div>
 </form>
