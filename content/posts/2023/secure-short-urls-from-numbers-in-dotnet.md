@@ -1,6 +1,6 @@
 ---
-title: Secure Random Short URLs from Incrementing Numbers in .NET
-slug: secure-random-short-urls-from-incrementing-numbers-in-dotnet
+title: Secure Short URLs from Numbers in .NET
+slug: secure-short-urls-from-numbers-in-dotnet
 
 categories: Development
 tags:

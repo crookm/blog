@@ -1,6 +1,6 @@
 ---
-title: "Navigating a Mixed Landscape: Docker, gRPC, and REST APIs in .NET"
-slug: navigating-a-mixed-landscape-docker-grpc-and-rest-apis-in-net
+title: Docker, gRPC, and REST APIs in .NET
+slug: docker-grpc-and-rest-apis-in-dotnet
 date: 2023-06-05T11:53:00+12:00
 
 categories: Development
