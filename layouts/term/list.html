@@ -1,0 +1,24 @@
+{{ define "submenu" }}
+    {{ partial "submenu.html" .Site.Menus.posts }}
+{{ end }}
+
+{{ define "main" }}
+    <h1 class="title">{{ .Title | title }}</h1>
+    <p>
+        All posts in the {{ .Title | lower }} {{ .Data.Singular }}.
+    </p>
+    <hr />
+
+    <p style="margin: 20px 0">
+        <a href="{{ .Data.Plural | absURL }}/">&larr; Back to all {{ .Data.Plural }}</a>
+    </p>
+    <hr />
+
+    <br />
+    {{ $paginator := .Paginate .Pages }}
+    {{ range $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "paginator.html" $paginator }}
+{{ end }}

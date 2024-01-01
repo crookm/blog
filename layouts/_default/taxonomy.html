@@ -3,14 +3,18 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ with .Content }}
-        <section>{{ . }}</section>
-    {{ end }}
-    
+    <h1 class="title">{{ .Title | title }}</h1>
+    <p style="margin-top: 4px;">
+        A list of all {{ .Data.Plural | lower }}.
+    </p>
+    <hr />
+
+    <br />
     {{ $paginator := .Paginate .Pages }}
     {{ range $paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
-    
+
+    <br />
     {{ partial "paginator.html" $paginator }}
 {{ end }}
