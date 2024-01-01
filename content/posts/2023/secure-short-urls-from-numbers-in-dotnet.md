@@ -46,7 +46,7 @@ The prime use case for URL shorteners these days is for within SMS messages or i
 
 ### Randomly Generated Short URLs
 
-Another solution is to generate a random string of characters for each URL. This would be a great choice for our URL shortener, because it would be very difficult to guess the next URL in the sequence. We could use a random string of characters like `https://example.com/abc123`, which would be very difficult to guess. This would be a great choice for our URL shortener, but it would be difficult to guarantee that the generated string is unique.
+Another solution is to generate a random string of characters for each URL. This would be a great choice for our URL shortener, because it would be very difficult to guess the next URL in the sequence. We could use a random string of characters like `https://example.com/abc123`, which would be very difficult to guess. While this does meet some of our needs, it would be difficult to guarantee that the generated string is unique.
 
 We would need to check that the generated string is not already in use, and generate a new one if it is. This has the potential to be a very expensive operation, particularly as the number of URLs in our database increases, and the space of possible URLs decreases.
 
