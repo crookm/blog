@@ -1,0 +1,18 @@
+{{ if or (.GetTerms "categories") (.GetTerms "tags") }}
+<p style="margin-top: 10px;">
+    Posted
+    {{ with index (.GetTerms "categories") 0 }}
+        in <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+
+    {{ with .GetTerms "tags" }}
+        {{ $tagCount := len . }}
+        with {{ if gt $tagCount 1 }}tags{{ else }}tag{{ end }}
+
+        {{ range $i, $tag := . -}}
+            {{ if $i }}, {{ if and (gt $tagCount 2) (eq (add $i 1) $tagCount) }}and{{ end }}{{ end }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end }}
+    {{ end }}
+    </p>
+{{ end }}
