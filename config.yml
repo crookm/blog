@@ -22,7 +22,6 @@ markup:
     guessSyntax: false
     codeFences: true
     noClasses: true
-    lineNos: true
 
 menu:
   main:
