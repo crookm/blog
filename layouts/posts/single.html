@@ -26,8 +26,9 @@
     </div>
 
     {{ .Content }}
-
-    {{ partial "discussion.html" . }}
-    {{ partial "gitinfo.html" . }}
 </article>
+
+{{ partial "seriesinfo.html" . }}
+{{ partial "discussion.html" . }}
+{{ partial "gitinfo.html" . }}
 {{ end }}
