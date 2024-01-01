@@ -138,6 +138,16 @@ article.single .properties p {
 }
 
 
+/* https://github.com/adityatelange/hugo-PaperMod/issues/828#issuecomment-1171994855 */
+/* Fixes iOS font sizing anomaly */
+code {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html,
   body {
