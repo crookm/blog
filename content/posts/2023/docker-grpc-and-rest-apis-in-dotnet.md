@@ -3,9 +3,8 @@ title: Docker, gRPC, and REST APIs in .NET
 slug: docker-grpc-and-rest-apis-in-dotnet
 date: 2023-06-05T11:53:00+12:00
 
-categories: Development
+categories: Engineering
 tags:
-  - grpc
   - docker
   - azure
   - dotnet

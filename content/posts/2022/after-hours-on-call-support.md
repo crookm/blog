@@ -4,7 +4,6 @@ date: 2022-08-25T22:40:00+12:00
 
 categories: Personal
 tags:
-  - devops
   - sre
 ---
 

@@ -2,9 +2,8 @@
 title: Java Still Sucks
 date: 2022-09-06T07:44:00+12:00
 
-categories: Personal
+categories: Engineering
 tags:
-  - apis
   - java
 ---
 

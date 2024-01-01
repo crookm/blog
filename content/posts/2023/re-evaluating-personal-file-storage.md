@@ -3,8 +3,6 @@ title: Re-evaluating Personal File Storage
 date: 2023-02-01T22:25:00+12:00
 
 categories: Personal
-tags:
-  - cloud
 ---
 
 [Resilio Sync](https://www.resilio.com/individuals/) is a great tool for syncing files across multiple devices without relying on a cloud service. I have been using it for a long time, and I even bought a lifetime license to access all the features. One of the features I liked was the [encrypted folder](https://help.resilio.com/hc/en-us/articles/207370466-Encrypted-folders), which allowed me to sync with a [DigitalOcean droplet](https://m.do.co/c/f8ffd8a5f356) and have an offsite backup of my data. Resilio Sync worked well for me, but it also had some drawbacks.

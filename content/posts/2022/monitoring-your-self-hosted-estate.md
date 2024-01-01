@@ -2,9 +2,8 @@
 title: Monitoring Your Self-Hosted Estate
 date: 2022-08-20T09:13:00+12:00
 
-categories: Personal
+categories: DevOps
 tags:
-  - devops
   - sre
 ---
 

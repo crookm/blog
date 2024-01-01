@@ -6,7 +6,7 @@ description: |
 
   This was from a time when I was fascinated by login systems, and I thought I was a genius for using two salts and a hash algo nobody had heard of.
 
-categories: Development
+categories: Engineering
 tags:
   - php
 

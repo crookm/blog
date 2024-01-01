@@ -2,7 +2,7 @@
 title: Rust
 date: 2021-12-07T22:00:00+12:00
 
-categories: Development
+categories: Engineering
 tags:
   - rust
 ---

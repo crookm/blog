@@ -2,7 +2,7 @@
 title: Distro-Hopping
 date: 2021-12-05T00:25:00+12:00
 
-categories: Personal
+categories: DevOps
 tags:
   - linux
 ---

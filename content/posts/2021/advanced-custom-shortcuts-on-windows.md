@@ -2,7 +2,7 @@
 title: Advanced Custom Shortcuts on Windows
 date: 2021-10-07T21:02:00+12:00
 
-categories: Development
+categories: Engineering
 tags:
   - powershell
   - windows

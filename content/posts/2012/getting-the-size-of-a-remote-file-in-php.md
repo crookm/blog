@@ -6,7 +6,7 @@ description: |
   
   I was still new to PHP and programming in general, so I believed that complex code was better code.
 
-categories: Development
+categories: Engineering
 tags:
   - php
 
