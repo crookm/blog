@@ -18,6 +18,8 @@
                 {{ .FuzzyWordCount }} words
                 {{ with .ReadingTime }}&middot; {{ . }} min read{{ end }}
             </p>
+
+            {{ partial "taxonomyinfo.html" . }}
         </div>
 
         <hr/>
@@ -25,24 +27,7 @@
 
     {{ .Content }}
 
+    {{ partial "discussion.html" . }}
     {{ partial "gitinfo.html" . }}
-
-    <hr style="margin: 20px 0"/>
-    <script src="https://giscus.app/client.js"
-        data-repo="crookm/blog"
-        data-repo-id="R_kgDOHs-FjQ"
-        data-category="Comments"
-        data-category-id="DIC_kwDOHs-Fjc4Cb-Mw"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
 </article>
 {{ end }}
