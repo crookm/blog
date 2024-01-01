@@ -1,12 +1,14 @@
 {{ define "submenu" }}
-{{ if eq .Params.archiveType "posts" }}
-    {{ partial "submenu.html" .Site.Menus.posts }}
-{{ end }}
+    {{ if eq .Params.archiveType "posts" }}
+        {{ partial "submenu.html" .Site.Menus.posts }}
+    {{ end }}
 {{ end }}
 
 {{ define "main" }}
-<article class="single">
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="title">{{ .Params.archiveType | singularize | title }} Archive</h1>
+    <p style="margin-top: 4px;">
+        A single list of all {{ .Params.archiveType | pluralize }} published on this site.
+    </p>
     <hr/>
 
     {{ $type := .Params.archiveType }}
@@ -33,5 +35,4 @@
             {{ end }}
         {{ end }}
     {{ end }}
-</article>
 {{ end }}
