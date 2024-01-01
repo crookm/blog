@@ -5,7 +5,6 @@ date: 2023-06-05T11:53:00+12:00
 
 categories: Development
 tags:
-  - apis
   - grpc
   - docker
   - azure
