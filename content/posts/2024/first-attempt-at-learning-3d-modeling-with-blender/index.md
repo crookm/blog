@@ -1,10 +1,11 @@
 ---
 title: First Attempt at Learning 3D Modeling with Blender
 
+series: Learning Blender
 categories: Graphic Design
 tags:
-- blender
-- 3d
+  - blender
+  - 3d
 
 date: 2024-01-01T13:44:00+13:00
 ---
