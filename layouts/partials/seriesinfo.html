@@ -1,30 +1,41 @@
 {{ with index (.GetTerms "series") 0 }}
     {{ $taxonomy := index .Site.Taxonomies.series (.Title | urlize) }}
+    {{ range $i, $_ := $taxonomy | collections.Reverse }}
+        {{ if eq .Permalink $.Permalink }}
+            {{ $.Scratch.Set "index" (add $i 1) }}
+        {{ end }}
+    {{ end }}
 
     <hr style="margin: 20px 0"/>
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p>
-        This post is part of a series with <strong>{{ $taxonomy | len }}</strong> posts, with the most recent post published on <strong>{{ (index ($taxonomy | first 1) 0).Date | dateFormat "2 January 2006" }}</strong>.
+        This is the
+        {{ if gt ($taxonomy | len) 1 }}
+            <strong>{{ $.Scratch.Get "index" | humanize }}</strong> post of <strong>{{ $taxonomy | len }}</strong>
+        {{ else }}
+            <strong>only</strong> post
+        {{ end }}
+        in the {{ .Title }} series, with the most recent post published on <strong>{{ (index ($taxonomy | first 1) 0).Date | dateFormat "2 January 2006" }}</strong>.
     </p>
 
-    {{ range where .Site.Pages.ByDate "Params.series" $.Params.series }}
+    {{ range $taxonomy.Pages.ByDate }}
         {{ if gt $.Date.Unix .Date.Unix }}
-            {{ $.Scratch.Set "previous" .Permalink }}
+            {{ $.Scratch.Set "previous" . }}
         {{ end }}
     {{ end }}
-    {{ range where .Site.Pages.ByDate.Reverse "Params.series" $.Params.series }}
+    {{ range $taxonomy.Pages.ByDate.Reverse }}
         {{ if lt $.Date.Unix .Date.Unix }}
-            {{ $.Scratch.Set "next" .Permalink }}
+            {{ $.Scratch.Set "next" . }}
         {{ end }}
     {{ end }}
 
     <p class="clearfix">
         {{ with $.Scratch.Get "previous" }}
-        <a href="{{ . }}">&larr; prev post</a>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">&larr; prev post</a>
         {{ end }}
 
         {{ with $.Scratch.Get "next" }}
-        <a style="float:right;" href="{{ . }}">next post &rarr;</a>
+        <a style="float:right;" href="{{ .Permalink }}" title="{{ .Title }}">next post &rarr;</a>
         {{ end }}
     </p>
 {{ end }}
