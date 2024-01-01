@@ -15,6 +15,7 @@ permalinks:
 taxonomies:
   tag: "tags"
   category: "categories"
+  series: "series"
 
 markup:
   highlight:
