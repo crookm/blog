@@ -6,7 +6,7 @@ description: |
 
   I think I was just excited to figure this out, it's not really that useful. Even the docs I link to say not to use it for this purpose.
 
-categories: Development
+categories: Engineering
 tags:
   - php
 

@@ -6,7 +6,6 @@ categories: DevOps
 tags:
   - kubernetes
   - terraform
-  - devops
   - sre
 ---
 

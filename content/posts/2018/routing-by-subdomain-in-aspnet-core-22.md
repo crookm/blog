@@ -2,7 +2,7 @@
 title: Routing by Subdomain in ASP.NET Core 2.2
 date: 2018-09-30T23:14:00+12:00
 
-categories: Development
+categories: Engineering
 tags:
   - dotnet
 ---

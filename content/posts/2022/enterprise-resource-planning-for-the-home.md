@@ -2,9 +2,8 @@
 title: Enterprise Resource Planning, for the Home
 date: 2022-08-29T21:18:00+12:00
 
-categories: Personal
+categories: DevOps
 tags:
-  - devops
   - self-hosted
   - automation
 ---

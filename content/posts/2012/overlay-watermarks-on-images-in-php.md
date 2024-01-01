@@ -4,7 +4,7 @@ title: Overlay Watermarks on Images in PHP
 description: |
   A post rescued from an old blog of mine from the Wayback Machine. I was 14 when I wrote this, so it's a bit cringy.
 
-categories: Development
+categories: Engineering
 tags:
   - php
 
