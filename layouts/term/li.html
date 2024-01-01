@@ -1,0 +1,8 @@
+<section class="entry">
+    <h3 style="margin-bottom: 4px;">
+        <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    </h3>
+    <p style="margin-top: 4px;">
+        Last updated <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006" }}</time>
+    </p>
+</section>
