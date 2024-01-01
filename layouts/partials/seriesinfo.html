@@ -1,0 +1,30 @@
+{{ with index (.GetTerms "series") 0 }}
+    {{ $taxonomy := index .Site.Taxonomies.series (.Title | urlize) }}
+
+    <hr style="margin: 20px 0"/>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>
+        This post is part of a series with <strong>{{ $taxonomy | len }}</strong> posts, with the most recent post published on <strong>{{ (index ($taxonomy | first 1) 0).Date | dateFormat "2 January 2006" }}</strong>.
+    </p>
+
+    {{ range where .Site.Pages.ByDate "Params.series" $.Params.series }}
+        {{ if gt $.Date.Unix .Date.Unix }}
+            {{ $.Scratch.Set "previous" .Permalink }}
+        {{ end }}
+    {{ end }}
+    {{ range where .Site.Pages.ByDate.Reverse "Params.series" $.Params.series }}
+        {{ if lt $.Date.Unix .Date.Unix }}
+            {{ $.Scratch.Set "next" .Permalink }}
+        {{ end }}
+    {{ end }}
+
+    <p class="clearfix">
+        {{ with $.Scratch.Get "previous" }}
+        <a href="{{ . }}">&larr; prev post</a>
+        {{ end }}
+
+        {{ with $.Scratch.Get "next" }}
+        <a style="float:right;" href="{{ . }}">next post &rarr;</a>
+        {{ end }}
+    </p>
+{{ end }}
