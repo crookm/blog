@@ -23,4 +23,6 @@ I'm not a particularly creative person to begin with, so don't laugh at my first
 
 It's been fun, so I intend to keep learning and practicing. I'm going to try and make a few more figures, and then try the rest of the pipeline - rigging, texturing, etc. I want to then put the skills to use as part of a game dev project, but I'm not sure what yet. I'll keep you posted!
 
+If you'd like to follow along with what I'm learning, I've created a YouTube playlist of the tutorials I'm following: [Learning 3D Modeling](https://youtube.com/playlist?list=PLWH_hKrs6C9-XlzOyygbh0f9LFH2jXn-8). Videos are in the order I'm following/plan to follow.
+
 [Download Blender project &rarr;](figure.blend)
