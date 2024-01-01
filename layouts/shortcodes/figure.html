@@ -1,4 +1,9 @@
-{{ $img := resources.Get (.Get "src")}}
+{{ $src := .Get "src" }}
+{{ $img := resources.Get $src }}
+{{ if not $img }}
+  {{ $img = .Page.Resources.GetMatch $src }}
+{{ end }}
+
 {{ $imgWebpDesktop := $img.Resize "530x webp q90" }}
 {{ $imgWebpMobile := $img.Resize "360x webp q75" }}
 {{ $imgPngMobile := $img.Resize "360x png" }}
