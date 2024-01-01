@@ -17,7 +17,7 @@ I learn primarily by doing, so I started by watching and following along with Yo
 
 The tutorial was helpful in learning how to use the tools in Blender, as well as how to model something from a primitive shape. I also learned about the modifiers and how to use them to make the modeling process easier - such as the mirror and subdivision surface modifiers.
 
-{{< figure src="figure-skybox.png" caption="Render of my first attempt at modeling a figure in Blender." >}}
+{{< figure src="figure-skybox.png" caption="Render of my first attempt at modeling a figure in Blender - his name is Bobbin." >}}
 
 I'm not a particularly creative person to begin with, so don't laugh at my first attempt! 😂 I found modeling the hands to be the most difficult part, and they still look weird proportionally.
 
