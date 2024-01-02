@@ -17,12 +17,10 @@ I learn primarily by doing, so I started by watching and following along with Yo
 
 The tutorial was helpful in learning how to use the tools in Blender, as well as how to model something from a primitive shape. I also learned about the modifiers and how to use them to make the modeling process easier - such as the mirror and subdivision surface modifiers.
 
-{{< figure src="figure-skybox.png" caption="Render of my first attempt at modeling a figure in Blender - his name is Bobbin." >}}
+{{< model src="figure.glb" poster="figure-skybox.png" download="figure.blend" caption="Render of my first attempt at modeling a figure in Blender - his name is Bobbin." >}}
 
 I'm not a particularly creative person to begin with, so don't laugh at my first attempt! 😂 I found modeling the hands to be the most difficult part, and they still look weird proportionally.
 
 It's been fun, so I intend to keep learning and practicing. I'm going to try and make a few more figures, and then try the rest of the pipeline - rigging, texturing, etc. I want to then put the skills to use as part of a game dev project, but I'm not sure what yet. I'll keep you posted!
 
 If you'd like to follow along with what I'm learning, I've created a YouTube playlist of the tutorials I'm following: [Learning 3D Modeling](https://youtube.com/playlist?list=PLWH_hKrs6C9-XlzOyygbh0f9LFH2jXn-8). Videos are in the order I'm following/plan to follow.
-
-[Download Blender project &rarr;](figure.blend)
