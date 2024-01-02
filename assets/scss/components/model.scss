@@ -1,0 +1,44 @@
+.model-container {
+  max-width: 100%;
+  min-height: 500px;
+  padding: 10px;
+  background: #f2f2f2;
+  color: #666;
+}
+
+.model-container model-viewer,
+.model-container .model-zone {
+  width: 100%;
+  height: 500px;
+}
+
+.model-container > .details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.model-container > .details p {
+  margin: 0;
+}
+
+.model-container > .details > .caption {
+  flex-grow: 1;
+}
+
+.model-container > .details > .actions {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .model-container {
+    background: #373737;
+    color: #959595;
+  }
+}

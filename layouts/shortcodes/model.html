@@ -1,0 +1,47 @@
+{{ $src := .Page.Resources.GetMatch (.Get "src") }}
+{{ $poster := .Page.Resources.GetMatch (.Get "poster") }}
+{{ $posterWebp := "" }}
+{{ with $poster }}
+    {{ $posterWebp := $poster.Resize "530x webp q90" }}
+{{ end }}
+
+{{ with $src }}
+    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.3.0/dist/model-viewer.min.js"
+            integrity="sha256-N7UIWRiO9sxEJuXG142j7y3fD49ycvaVeO8dzSW+gjc="
+            type="module" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div class="model-container">
+        <div class="model-zone">
+            <model-viewer src="{{ .RelPermalink }}"
+                          {{ with $posterWebp }} poster="{{ .RelPermalink }}" {{ end }}
+                          {{ with $.Get "caption" }} alt="{{ . }}" {{ end }}
+                          shadow-intensity="1" camera-controls auto-rotate xr touch-action="pan-y"></model-viewer>
+        </div>
+
+        {{ if or ($.Get "caption") ($.Get "download") ($poster) }}
+        <div class="details">
+            {{ with $.Get "caption" }}
+            <p class="caption">
+                {{ . }}
+            </p>
+            {{ end }}
+
+            {{ if or ($.Get "download") ($poster) }}
+            <p class="actions">
+                {{ with $poster }}
+                <a href="{{ .RelPermalink }}" title="Static image">🖼️</a>
+                {{ end }}
+
+                {{ with $.Get "download" }}
+                <a href="{{ . }}" title="Download model">💾</a>
+                {{ end }}
+            </p>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+{{ else }}
+    <p>
+        <strong>Error</strong>: unable to find required resource for model.
+    </p>
+{{ end }}
