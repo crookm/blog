@@ -6,6 +6,9 @@
 @import "bootstrap/grid";
 @import "bootstrap/images";
 
+
+@import "components/model";
+
 html,
 body {
   font-size: 14px;
@@ -136,6 +139,8 @@ article.single .properties {
 article.single .properties p {
   margin: 4px 0;
 }
+
+
 
 
 /* https://github.com/adityatelange/hugo-PaperMod/issues/828#issuecomment-1171994855 */
