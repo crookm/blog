@@ -23,6 +23,10 @@ markup:
     codeFences: true
     noClasses: true
 
+privacy:
+  youtube:
+    privacyEnhanced: true
+
 menu:
   main:
     - name: posts
