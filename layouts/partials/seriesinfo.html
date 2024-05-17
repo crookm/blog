@@ -1,5 +1,5 @@
 {{ with index (.GetTerms "series") 0 }}
-    {{ $taxonomy := index .Site.Taxonomies.series (.Title | urlize) }}
+    {{ $taxonomy := .Site.Taxonomies.series.Get .Title }}
     {{ range $i, $_ := $taxonomy | collections.Reverse }}
         {{ if eq .Permalink $.Permalink }}
             {{ $.Scratch.Set "index" (add $i 1) }}
