@@ -11,7 +11,7 @@ tags:
 date: 2024-01-05T11:08:30+13:00
 ---
 
-So I feel like I had a bit of a false start in terms of my [learning 3D modeling]({{< ref "/series/learning-3d-modeling" >}}). I started with [modeling a humanoid figure]({{< relref "../first-attempt-at-learning-3d-modeling-with-blender" >}}) - while the tutorial I was following was intended for absolute beginners who had never touched 3D modeling before, the subject was maybe a touch too complex to start with, and the teacher moved along too quickly. I ended up with something reminiscent of a lego character with weird hands.
+So I feel like I had a bit of a false start in terms of my [learning 3D modeling]({{< ref "/series/learning-3d-modeling" >}}). I started with [modeling a humanoid figure]({{< ref "/posts/2024/first-attempt-at-learning-3d-modeling-with-blender" >}}) - while the tutorial I was following was intended for absolute beginners who had never touched 3D modeling before, the subject was maybe a touch too complex to start with, and the teacher moved along too quickly. I ended up with something reminiscent of a lego character with weird hands.
 
 I decided to take a step back and try something simpler, with a different tutorial. I found [this one](https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z) by Blender Guru, which is an entire series on creating a donut with plenty of detail and explanation, as well as loads of opportunities to try different tools. This guy is a really good teacher!
 
