@@ -71,7 +71,7 @@ footer .menu > li {
 nav .menu > li:not(:last-of-type)::after,
 nav .submenu > li:not(:last-of-type)::after,
 footer .menu > li:not(:last-of-type)::after {
-  margin-left: 4px;
+  margin: 0 4px;
 }
 
 nav .menu > li:not(:last-of-type)::after,
