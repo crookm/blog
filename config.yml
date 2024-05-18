@@ -2,6 +2,7 @@ title: Matt Crook
 languageCode: en-NZ
 baseURL: https://mattcrook.io/
 
+uglyURLs: true
 enableGitInfo: true
 enableRobotsTXT: true
 enableInlineShortcodes: true
@@ -30,25 +31,25 @@ privacy:
 menu:
   main:
     - name: posts
-      url: /posts/
+      url: /posts.html
     - name: projects
-      url: /projects/
+      url: /projects.html
   
   posts:
     - name: Index
-      url: /posts/
+      url: /posts.html
       weight: 1
     - name: Archive
-      url: /archives/posts/
+      url: /archives/posts.html
       weight: 2
     - name: Categories
-      url: /categories/
+      url: /categories.html
       weight: 3
     - name: Series
-      url: /series/
+      url: /series.html
       weight: 4
     - name: Tags
-      url: /tags/
+      url: /tags.html
       weight: 5
 
   footer:
