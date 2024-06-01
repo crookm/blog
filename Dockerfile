@@ -4,7 +4,7 @@ WORKDIR /src
 COPY . ./
 RUN hugo --environment production --cleanDestinationDir --minify --panicOnWarning -d /out
 
-FROM caddy:2.7.6 AS run
+FROM caddy:2.8.1 AS run
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /out /srv
