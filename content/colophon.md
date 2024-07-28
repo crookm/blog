@@ -15,8 +15,8 @@ a list of the tools I use to create and host it.
 * [Visual Studio Code](https://code.visualstudio.com)
 
 ### Infrastructure
-This website is self-hosted on a server which turns itself off at night (UTC+12) to save energy, with WOL to turn back on when a request is made - resulting in a short delay for cold startups.
+* [DigitalOcean App Platform](https://m.do.co/c/f8ffd8a5f356) (referral link)
 
-[Cloudflare](https://www.cloudflare.com) caching is used to serve from the edge as much as possible.
+This website is hosted on the DigitalOcean app platform as a static site in the SYD region (rejoice! an APAC region, finally!).
 
-It ain't much, but it's honest work.
+The build is managed and run in the app platform when the [respository](https://github.com/crookm/blog) is updated, defined using a [Dockerfile](https://github.com/crookm/blog/blob/main/Dockerfile) for simplicity - the automatic buildpack selection is super not helpful when you are using Go to manage Hugo dependencies.
