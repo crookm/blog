@@ -20,6 +20,10 @@
 
     {{ partial "footer.html" . }}
     {{- block "javascript" . }}{{ end -}}
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f88e175d266947698b6dbfeebd525835"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
