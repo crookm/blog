@@ -5,8 +5,8 @@ Mastodon: @matt@mastodon.nz
 Location: Auckland, New Zealand
 
 /* SITE */
-Last update: 2023-12-25
+Last update: 2024-07-28
 Language: English
 Development: Visual Studio Code, Linux Mint
 Runtime: Hugo
-Hosting: Cloudflare Pages
+Hosting: DigitalOcean App Platform
