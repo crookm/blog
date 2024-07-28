@@ -1,4 +1,4 @@
-FROM klakegg/hugo:ext-ci AS build
+FROM ghcr.io/hugomods/hugo:ci-0.129.0 AS build
 WORKDIR /src
 
 COPY . ./
