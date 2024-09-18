@@ -7,14 +7,14 @@
     <p style="margin-top: 4px;">
         A list of all {{ .Data.Plural | lower }}.
     </p>
-    <hr />
+    <hr>
 
-    <br />
+    <br>
     {{ $paginator := .Paginate .Pages }}
     {{ range $paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
 
-    <br />
+    <br>
     {{ partial "paginator.html" $paginator }}
 {{ end }}

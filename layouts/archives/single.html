@@ -9,7 +9,7 @@
     <p style="margin-top: 4px;">
         A single list of all {{ .Params.archiveType | pluralize }} published on this site.
     </p>
-    <hr/>
+    <hr>
 
     {{ $type := .Params.archiveType }}
     {{ $.Scratch.Set "count" 1 }}

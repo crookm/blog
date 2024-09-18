@@ -7,14 +7,14 @@
     <p>
         All posts in the {{ .Title | lower }} {{ .Data.Singular }}.
     </p>
-    <hr />
+    <hr>
 
     <p style="margin: 20px 0">
         <a href="{{ .Data.Plural | absURL }}.html">&larr; Back to all {{ .Data.Plural }}</a>
     </p>
-    <hr />
+    <hr>
 
-    <br />
+    <br>
     {{ $paginator := .Paginate .Pages }}
     {{ range $paginator.Pages }}
         {{ .Render "li" }}
