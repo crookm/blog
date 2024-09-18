@@ -6,9 +6,9 @@
         {{ $imgWebp := .Resize "72x webp photo q90" }}
         {{ $imgJpg := .Resize "72x jpg q90" }}
         <picture>
-            <source type="{{ $imgWebp.MediaType }}" srcset="{{ $imgWebp.RelPermalink }}" />
+            <source type="{{ $imgWebp.MediaType }}" srcset="{{ $imgWebp.RelPermalink }}">
             <img src="{{ $imgJpg.RelPermalink }}" alt="A picture of me" class="img-thumbnail" width="{{ $imgJpg.Width }}"
-                height="{{ $imgJpg.Height }}" />
+                height="{{ $imgJpg.Height }}">
         </picture>
     </div>
     {{ end }}
@@ -18,7 +18,7 @@
 </div>
 {{ end }}
 
-<hr />
+<hr>
 
 {{ with .Site.GetPage "posts" }}
 <h2>Recent posts</h2>
