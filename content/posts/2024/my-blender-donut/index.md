@@ -25,7 +25,7 @@ In particular, I was quite excited by the geometry nodes system. It feels a bit 
 
 The tutorial was quite full-on, teaching many different pieces of the 3D creator pipeline. This isn't necessarily a bad thing however, as I'll be able to refer to historical projects when I need to do similar things. This is how I learned to program; by building up a toolbox of techniques and then copying them into new projects.
 
-{{< model src="donut.glb" download="https://drive.youfeel.me/d/s/whgU4PGyuBRkWLsU0bNTuq7K3KDwCpJM/5yPCDJK73l2Fs5E4TvGMqiWDrtszkML0-FrFANpnvBws" caption="My donuts on a platter. Couldn't get the sprinkles working for the web export, so they look a bit bare!" >}}
+{{< model src="donut.glb" caption="My donuts on a platter. Couldn't get the sprinkles working for the web export, so they look a bit bare!" >}}
 
 I ended up working with lighting with the 'cycles' renderer as part of this tutorial, which made everything look really pretty, but my renders took a **long** time - a 300 frame animation took about six hours to render in 4K on my 'puter with an RTX 4080. I have found that this is normal, and I have no doubts that having a recent GPU is helping significantly, but yikes.
 
