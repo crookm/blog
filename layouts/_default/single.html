@@ -9,6 +9,8 @@
     
     {{ .Content }}
 
-    {{ partial "gitinfo.html" . }}
+    {{ if (default true .Params.showGitInfo) }}
+        {{ partial "gitinfo.html" . }}
+    {{ end }}
 </article>
 {{ end }}
