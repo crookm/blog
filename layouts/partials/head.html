@@ -8,9 +8,19 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{ $cssOptions := (dict "outputStyle" "compressed") }}
-{{ $css := resources.Get "scss/main.scss" | resources.ToCSS $cssOptions | resources.Fingerprint "sha512" -}}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ with resources.Get "scss/main.scss" }}
+    {{ $opts := dict "transpiler" "libsass" "enableSourceMap" true }}
+    {{ with . | toCSS $opts }}
+        {{ if hugo.IsDevelopment }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+        {{ else }}
+            {{ with . | minify | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
 
 {{ range .AlternativeOutputFormats -}}
 {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
