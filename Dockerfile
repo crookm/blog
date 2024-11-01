@@ -1,4 +1,4 @@
-FROM ghcr.io/hugomods/hugo:ci-0.135.0 AS build
+FROM ghcr.io/hugomods/hugo:ci-0.136.5 AS build
 WORKDIR /src
 
 COPY . ./
