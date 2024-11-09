@@ -4,7 +4,6 @@ baseURL: https://mattcrook.io/
 
 uglyURLs: true
 enableGitInfo: true
-enableRobotsTXT: true
 enableInlineShortcodes: true
 
 paginate: 10
