@@ -1,5 +1,4 @@
 #!/bin/bash
-set -euxo pipefail
+set -euxo pipefail xtrace
 
-hugo --environment production --cleanDestinationDir --minify --panicOnWarning
-rsync -rvzhpg --delete --chmod=755 --chown=:http public/ javelin:/volume1/web/matt/blog
+hugo --gc --environment production --cleanDestinationDir --minify --panicOnWarning
