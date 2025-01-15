@@ -6,7 +6,8 @@ uglyURLs: true
 enableGitInfo: true
 enableInlineShortcodes: true
 
-paginate: 10
+pagination:
+  pagerSize: 10
 summaryLength: 10
 
 permalinks:
