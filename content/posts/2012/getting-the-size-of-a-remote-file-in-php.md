@@ -28,7 +28,7 @@ Here:
 //    bonus points if you can find the vulnerabilities.
 // > It is kept here as a record of my progress as a programmer.
 
-$url = "https://mattcrook.io/favicon.ico"; // Put the URL you want to get the filesize of here
+$url = "https://mattcrook.nz/favicon.ico"; // Put the URL you want to get the filesize of here
 
 function getRemoteFileSize($urll){
   $parsed = parse_url($urll);

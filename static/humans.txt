@@ -1,6 +1,6 @@
 /* TEAM */
 Developer: Matthew Crook
-Site: https://mattcrook.io
+Site: https://mattcrook.nz
 Mastodon: @matt@mastodon.nz
 Location: Auckland, New Zealand
 
