@@ -3,11 +3,13 @@
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="HandheldFriendly" content="True">
-<meta name="fediverse:creator" content="@matt@mastodon.nz">
 
 <title>{{ with .Title }}{{ . | lower }} &ndash; {{end}}{{ .Site.Title | lower }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
+
+{{ partial "common-partials/head-seo.html" . }}
+<meta name="fediverse:creator" content="@matt@mastodon.nz">
 
 {{ with resources.Get "scss/main.scss" }}
     {{ $opts := dict "transpiler" "libsass" "enableSourceMap" true }}

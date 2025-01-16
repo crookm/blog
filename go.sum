@@ -1,3 +1,5 @@
+github.com/bep/hugo-mod-misc/common-partials v0.1.0 h1:SiGnrf9MW1aFczXpXPTDpsGr3SvimIaBXMpZucPxT+g=
+github.com/bep/hugo-mod-misc/common-partials v0.1.0/go.mod h1:lw2586uqPfye9yTYgSyvZwU3dfpZcjDXmIOJeR4D6O0=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20101.20300 h1:1Xe5fPOjFpMakBfsXKzzKtdu/sfqoM0o7JuSp2l1RiU=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20101.20300/go.mod h1:/FiWjAJyOiVrC2vDur97ogmWIaBB+YS6jH7nf6cm+3E=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
