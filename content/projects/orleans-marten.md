@@ -16,7 +16,7 @@ date: 2025-01-14T16:41:48+12:00
 An open source library of a [Marten](https://martendb.io/) implementation of [Orleans](https://docs.microsoft.com/dotnet/orleans) providers for **membership** (clustering), **state storage**, and **reminder storage**. It seamlessly makes use of existing Marten project configuration and database management, and has a slim setup that's easy to get started with.
 
 [Read the blog post &rarr;]({{< relref "/posts/2025/building-a-custom-orleans-storage-provider" >}})  
-[View the library on Github &rarr;](https://github.com/crookm/fridgemagnet)
+[View the library on Github &rarr;](https://github.com/interflare/orleans-marten)
 
 ## Why this library
 
