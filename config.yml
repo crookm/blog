@@ -34,7 +34,7 @@ menu:
       url: /posts.html
     - name: projects
       url: /projects.html
-  
+
   posts:
     - name: Index
       url: /posts.html
@@ -60,4 +60,5 @@ menu:
 
 module:
   imports:
-  - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+    - path: github.com/bep/hugo-mod-misc/common-partials
+    - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
