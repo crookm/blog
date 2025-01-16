@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA256
+Hash: SHA512
 
 Contact: mailto:mattlcrook@icloud.com
 Expires: 2027-12-25T12:00:00+1300
 Preferred-Languages: en
-Encryption: https://mattcrook.io/pubkey.txt
-Canonical: https://mattcrook.io/security.txt
+Encryption: https://mattcrook.nz/pubkey.txt
+Canonical: https://mattcrook.nz/security.txt
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYIAB0WIQQuHXIR0kyLrtKo7u/UEEql9v8bawUCZYimBAAKCRDUEEql9v8b
-a+ZeAQDv4fRoB1dvjQplo14bvhvRLgcJrACAKiIlCcoJE84gfwD+Mk8OIen6IaZ6
-l1dj6lUH6yMdfbAvraOF9eWL3ZvS/AM=
-=IfQv
+iHUEARYKAB0WIQQuHXIR0kyLrtKo7u/UEEql9v8bawUCZ4jCeQAKCRDUEEql9v8b
+ayNlAP9Gt41R6RFVfQyA/xWHQBjmWG5yIJIFaYCxCJC18c9mIgEA+UOc6AcmJmPa
+hMEGiFVvlGtNllf3+Gl/HJLK+0h34gk=
+=aPkn
 -----END PGP SIGNATURE-----
