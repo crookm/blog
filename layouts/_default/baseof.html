@@ -21,6 +21,12 @@
     {{ partial "footer.html" . }}
     {{- block "javascript" . }}{{ end -}}
 
+    {{ if .HasShortcode "model" }}
+        <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"
+                integrity="sha256-iSNznIwbSgLdnIz2baXCpEgjXLXknkOd17u6lEuk++E="
+                type="module" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{ end }}
+
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "36dc6e7bdf9149298c3f02735a3d76af"}'></script>
     <!-- End Cloudflare Web Analytics -->

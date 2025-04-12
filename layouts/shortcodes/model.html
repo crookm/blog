@@ -6,10 +6,6 @@
 {{ end }}
 
 {{ with $src }}
-    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"
-            integrity="sha256-iSNznIwbSgLdnIz2baXCpEgjXLXknkOd17u6lEuk++E="
-            type="module" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <div class="model-container">
         <div class="model-zone">
             <model-viewer src="{{ .RelPermalink }}"
@@ -41,7 +37,5 @@
         {{ end }}
     </div>
 {{ else }}
-    <p>
-        <strong>Error</strong>: unable to find required resource for model.
-    </p>
+    {{ errorf "unable to find required resource 'src' for model: %s" .Position }}
 {{ end }}
