@@ -1,0 +1,77 @@
+name: ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: docker
+    container:
+      image: ghcr.io/hugomods/hugo:ci-0.143.1@sha256:4c124cdfd3e19f68d51ff6dcd8e351938034ea62032a7825405532b3007a8041
+    
+    steps:
+      - name: Set up environment
+        run: apk add git-lfs
+      - name: Checkout
+        uses: https://data.forgejo.org/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          lfs: true
+
+      - name: Build
+        run: |
+          hugo --gc --environment production --cleanDestinationDir --minify --panicOnWarning
+
+      - name: Upload artifacts
+        uses: https://data.forgejo.org/forgejo/upload-artifact@16871d9e8cfcf27ff31822cac382bbb5450f1e1e # v4
+        with:
+          name: public
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: docker
+    if: github.event_name != 'pull_request'
+
+    steps:
+      - name: Checkout
+        uses: https://data.forgejo.org/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Set up git
+        run: |
+          git config user.email forge.svc@abyros.net
+          git config user.name Forge
+
+      - name: Set up pages branch
+        run: git switch --orphan pages
+
+      - name: Download artifacts
+        uses: https://data.forgejo.org/forgejo/download-artifact@d8d0a99033603453ad2255e58720b460a0555e1e # v4
+        with:
+          name: public
+
+      - name: Deploy artifacts
+        run: |
+          git add .
+          git commit -m deployment
+          git push --force --set-upstream origin pages
+
+  validate:
+    needs: deploy
+    runs-on: docker
+    if: github.event_name != 'pull_request'
+
+    steps:
+      - name: Download artifacts
+        uses: https://data.forgejo.org/forgejo/download-artifact@d8d0a99033603453ad2255e58720b460a0555e1e # v4
+        with:
+          name: public
+
+      - name: Check for broken links
+        uses: https://github.com/justinbeckwith/linkinator-action@3d5ba091319fa7b0ac14703761eebb7d100e6f6d # v1.11.0
+        with:
+          paths: .
+          recurse: true
+
