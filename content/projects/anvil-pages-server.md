@@ -10,7 +10,7 @@ A custom implementation of a Pages server for Forgejo and Gitea, which allows Gi
 
 It is written in .NET, using AOT compilation for speed, code generation for minimal APIs and logging, and `IOptionsSnapshot` for live configuration updates.
 
-[View the project on Github &rarr;](https://github.com/crookm/anvil)
+[View the project source &rarr;](https://enduringtech.dev/matt/anvil)
 
 ## Why this project
 
