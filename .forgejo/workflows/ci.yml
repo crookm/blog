@@ -42,8 +42,8 @@ jobs:
 
       - name: Set up git
         run: |
-          git config user.email forge.svc@abyros.net
-          git config user.name Forge
+          git config user.email forge.svc@enduringtech.dev
+          git config user.name forge[bot]
 
       - name: Set up pages branch
         run: git switch --orphan pages
@@ -56,7 +56,7 @@ jobs:
       - name: Deploy artifacts
         run: |
           git add .
-          git commit -m deployment
+          git commit -m deployment --author "${{ github.actor }} <${{ github.actor }}@noreply.enduringtech.dev>"
           git push --force --set-upstream origin pages
 
   validate:
