@@ -10,9 +10,6 @@ date: 2025-01-14T16:41:48+12:00
 [![NuGet version of Interflare.Orleans.Marten.Persistence](https://img.shields.io/nuget/v/Interflare.Orleans.Marten.Persistence?label=persistence)](https://www.nuget.org/packages/Interflare.Orleans.Marten.Persistence/)
 [![NuGet version of Interflare.Orleans.Marten.Reminders](https://img.shields.io/nuget/v/Interflare.Orleans.Marten.Reminders?label=reminders)](https://www.nuget.org/packages/Interflare.Orleans.Marten.Reminders/)
 
-[![Actions status of CI workflow](https://enduringtech.dev/interflare/orleans-marten/badges/workflows/ci.yml/badge.svg?label=ci)](https://enduringtech.dev/interflare/orleans-marten/actions/workflows/ci.yml)
-[![Actions status of release workflow](https://enduringtech.dev/interflare/orleans-marten/badges/workflows/release.yml/badge.svg?label=release)](https://enduringtech.dev/interflare/orleans-marten/actions/workflows/release.yml)
-
 An open source library of a [Marten](https://martendb.io/) implementation of [Orleans](https://docs.microsoft.com/dotnet/orleans) providers for **membership** (clustering), **state storage**, and **reminder storage**. It seamlessly makes use of existing Marten project configuration and database management, and has a slim setup that's easy to get started with.
 
 [Read the blog post &rarr;]({{< relref "/posts/2025/building-a-custom-orleans-storage-provider" >}})  
