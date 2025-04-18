@@ -9,4 +9,4 @@ Last update: 2024-07-28
 Language: English
 Development: Visual Studio Code, Linux Mint
 Runtime: Hugo
-Hosting: DigitalOcean App Platform
+Hosting: Anvil Pages (enduring.page)
