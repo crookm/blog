@@ -1,0 +1,73 @@
+{{/* Get remote data. */}}
+{{ $data := dict }}
+{{ $url := "https://enduringtech.dev/api/v1/repos/search?q=published&topic=true&uid=1&private=false&is_private=false&template=false&limit=100" }}
+{{ with try (resources.GetRemote $url) }}
+  {{ with .Err }}
+    {{ errorf "Unable to get remote resource %s: %s" $url . }}
+  {{ else with .Value }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %s" $url }}
+  {{ end }}
+{{ end }}
+
+{{ range $data.data }}
+
+  {{/* Fetch project README from the repository */}}
+  {{/* > If the first line of the readme is an H1 heading, use it as the title and remove it from the content */}}
+  {{ $content := dict "mediaType" "text/markdown" "value" "" }}
+  {{ $title := (strings.Replace .name "-" " " | title) }}
+  {{ $readme_url := print .url "/media/README.md" }}
+  {{ with try (resources.GetRemote $readme_url) }}
+    {{ with .Err }}
+      {{ if strings.Contains . "404" }}
+        {{/* 404 error - no content, which is fine */}}
+      {{ else }}
+        {{ errorf "Unable to get project README remote resource from %s: %s" $readme_url . }}
+      {{ end }}
+    {{ else with .Value }}
+      {{ $content = dict "mediaType" "text/markdown" "value" .Content }}
+
+      {{/* Parse the readme for a title */}}
+      {{ $readme := .Content }}
+      {{ $lines := split $readme "\n" }}
+      {{ if gt (len $lines) 0 }}
+        {{ $firstLine := index $lines 0 }}
+        {{ if and (strings.HasPrefix $firstLine "#") (not (strings.HasPrefix $firstLine "##")) }}
+          {{ $extractedTitle := trim (replaceRE "^#\\s*" "" $firstLine) " " }}
+          {{ if ne $extractedTitle "" }}
+            {{ $title = $extractedTitle }}
+            {{ $body := delimit (after 1 $lines) "\n" }}
+            {{ $content = dict "mediaType" "text/markdown" "value" $body }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Page params */}}
+  {{ $params := dict
+    "repo_url" .html_url
+    "tags" .topics
+  }}
+  {{ if in .topics "embeddable" }}
+    {{ $params = merge $params (dict "embed_frame_url" .website) }}
+  {{ end }}
+  {{ if .has_wiki }}
+    {{ $params = merge $params (dict "wiki_url" (print .html_url "/wiki")) }}
+  {{ end }}
+
+  {{ $.AddPage (dict
+    "content" $content
+    "summary" (cond (strings.HasSuffix .description ".") .description (print .description "."))
+    "dates" (dict
+      "date" (time.AsTime .created_at)
+      "lastmod" (time.AsTime .updated_at)
+    )
+    "kind" "page"
+    "params" $params
+    "path" .name
+    "title" $title
+  ) }}
+
+{{ end }}

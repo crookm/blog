@@ -1,7 +1,7 @@
 {{ define "javascript" }}
-{{ with .Params.projectFrame }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"
-        integrity="sha512-+bpyZqiNr/4QlUd6YnrAeLXzgooA1HKN5yUagHgPSMACPZgj8bkpCyZezPtDy5XbviRm4w8Z1RhfuWyoWaeCyg=="
+{{ with .Params.embed_frame_url }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.4.4/iframeResizer.min.js"
+        integrity="sha512-1kzh/Anfk2sgEpyhmB42Lnofhj2VpoGY/WTVdPTNrF7ls2zZQwy1aDAB6uc2ezsAjaoGmM2JMYo7R+g1oZeNaQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     iFrameResize();
@@ -12,23 +12,27 @@
 {{ define "main" }}
 <article class="single">
     <h1 class="title">{{ .Title }}</h1>
-    <div class="frontmatter">
-        {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ partial "frontmatter.html" . }}
 
-        <div class="properties">
-            <p>
-                Published on
-                <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}</time>
-            </p>
-        </div>
-
-        <hr>
-    </div>
+    {{ if or .Params.repo_url .Params.wiki_url }}
+    <p>
+        {{ with .Params.repo_url }}
+        <a href="{{ . }}">View source &rarr;</a>{{ if $.Params.wiki_url }} / {{ end }}
+        {{ end }}
+        {{ with .Params.wiki_url }}
+        <a href="{{ . }}">View wiki &rarr;</a>
+        {{ end }}
+    </p>
+    {{ if .Content }}
+    <hr style="margin: 20px 0;">
+    {{ end }}
+    {{ end }}
 
     {{ .Content }}
     
-    {{ with .Params.projectFrame }}
-    <iframe src="{{ . }}" style="{{- with $.Params.projectFrameMinHeight }}min-height: {{ . }}; {{ end -}}width: 100%; border: none;"></iframe>
+    {{ with .Params.embed_frame_url }}
+    <hr style="margin: 20px 0;">
+    <iframe src="{{ . }}" style="min-height: 220px; width: 100%; border: none;"></iframe>
     {{ end }}
 
     {{ partial "gitinfo.html" . }}

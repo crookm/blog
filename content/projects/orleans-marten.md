@@ -3,6 +3,9 @@ title: Orleans Marten providers
 summary: |
     An open source library of a Marten implementation of Orleans providers for membership (clustering), state storage, and reminder storage. It seamlessly makes use of existing Marten project configuration and database management, and has a slim setup that's easy to get started with.
 
+repo_url: https://enduringtech.dev/interflare/orleans-marten
+wiki_url: https://enduringtech.dev/interflare/orleans-marten/wiki
+
 date: 2025-01-14T16:41:48+12:00
 ---
 
