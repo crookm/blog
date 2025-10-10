@@ -55,7 +55,7 @@ resource "kubernetes_namespace" "example" {
 
 The above will work, but likely only once. Upon update, you might come across an error indicating that the host was incorrect, appearing to be localhost on port 80 - the defaults. This would be because of the way in which the Terraform dependency model graph works - the providers are always evaluated before actual resources.
 
-To get around this limitation, and avoid difficult to diagnose issues, it is important to split your definitions into two completely separate Terraform projects. This will mean you will need to run the `terraform apply` command two times, one for each project. The configuration of the Kubernetes provider in your 'workload' Terraform project would be configured wither by [sharing state](https://www.terraform.io/language/state/remote-state-data) through Terraform Cloud, or by using a data source of the cluster you created (if supported by your cloud provider).
+To get around this limitation, and avoid difficult to diagnose issues, it is important to split your definitions into two completely separate Terraform projects. This will mean you will need to run the `terraform apply` command two times, one for each project. The configuration of the Kubernetes provider in your 'workload' Terraform project would be configured wither by [sharing state](https://developer.hashicorp.com/terraform/language/state/remote-state-data) through Terraform Cloud, or by using a data source of the cluster you created (if supported by your cloud provider).
 
 Here is an example of this in action:
 
