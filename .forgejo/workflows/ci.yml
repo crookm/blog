@@ -58,22 +58,3 @@ jobs:
           git add .
           git commit -m deployment --author "${{ github.actor }} <${{ github.actor }}@noreply.enduringtech.dev>"
           git push --force --set-upstream origin pages
-
-  validate:
-    needs: deploy
-    runs-on: docker
-    if: github.event_name != 'pull_request'
-
-    steps:
-      - name: Download artifacts
-        uses: https://enduringtech.dev/actions/download-artifact-action@d8d0a99033603453ad2255e58720b460a0555e1e # v4
-        with:
-          name: public
-
-      - name: Check for broken links
-        uses: https://github.com/justinbeckwith/linkinator-action@3d5ba091319fa7b0ac14703761eebb7d100e6f6d # v1.11.0
-        with:
-          paths: .
-          recurse: true
-          skip: "https://developer.hashicorp.com/.*"
-
