@@ -75,4 +75,5 @@ jobs:
         with:
           paths: .
           recurse: true
+          skip: "https://developer.hashicorp.com/.*"
 
