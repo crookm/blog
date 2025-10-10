@@ -126,6 +126,10 @@ article.single .figure img {
   max-width: calc(100% - 9px);
 }
 
+article.single .figure video {
+  max-width: calc(100% - 20px);
+}
+
 article.single .figure .figure-caption {
   margin-top: -10px;
 }
@@ -186,11 +190,13 @@ code {
     color: #959595;
   }
 
-  article.single img {
+  article.single img,
+  article.single video {
     opacity: 0.75;
   }
 
-  article.single img:hover {
+  article.single img:hover,
+  article.single video:hover {
     opacity: 1;
   }
 }

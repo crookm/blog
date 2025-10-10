@@ -42,3 +42,5 @@ tags
 .idea
 
 .hugo_build.lock
+
+ffmpeg2pass-0.log
