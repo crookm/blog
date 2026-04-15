@@ -38,6 +38,6 @@ I found that in the C# version (as opposed to the 'GDScript' version of Godot), 
 
 One limitation I found that does not meet my requirements is that when using C# and Godot 4(.2), I am not able to publish to the web - version 3 does not have this limitation, however I don't want to begin as a new Godot user with the previous version. This appears to be a limitation of .NET at the moment, but is on the radar and intends to be supported as soon as possible by the team: [godotengine/godot#70796](https://github.com/godotengine/godot/issues/70796).
 
-If you want to see the results of my following the tutorial, you can have a look at the [project source](https://enduringtech.dev/matt/godot-tutorial-2d).
+If you want to see the results of my following the tutorial, you can have a look at the [project source](https://github.com/crookm/godot-tutorial-2d).
 
 So far, I'm feeling pretty good about Godot. I'm going to continue with the 3D tutorial and see how I feel about it after that. I'll keep you posted!

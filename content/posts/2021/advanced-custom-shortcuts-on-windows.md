@@ -19,4 +19,4 @@ So instead, I created a new PowerShell Module named `PSAdvancedShortcut` which I
 
 This module is a C# binary module, using p/invoke to set the hidden properties inside a shortcut file.
 
-You can check out [the source](https://enduringtech.dev/matt/ps-advanced-shortcut) and see it on [PSGallery](https://www.powershellgallery.com/packages/PSAdvancedShortcut).
+You can check out [the source](https://github.com/crookm/ps-advanced-shortcut) and see it on [PSGallery](https://www.powershellgallery.com/packages/PSAdvancedShortcut).

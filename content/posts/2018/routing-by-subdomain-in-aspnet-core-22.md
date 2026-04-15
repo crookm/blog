@@ -168,4 +168,4 @@ namespace DNSRouting.Controllers
 
 That's about it! You could do some kind of lookup on the host to get some kind of info from a data connection, and work with it like you would as if it was it's own web app! 🌐
 
-I put everything into a repo as a full web app - you can [find that here](https://enduringtech.dev/matt/dnsrouting).
+I put everything into a repo as a full web app - you can [find that here](https://github.com/crookm/dns-routing).

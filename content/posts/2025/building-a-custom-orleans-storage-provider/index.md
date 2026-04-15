@@ -25,7 +25,7 @@ Fortunately, the implementation for all the things I wanted to do was relatively
 
 ### State persistence
 
-I started with implementing state persistence, because I figured it would be the easiest. I wasn't wrong - just needed to implement [`IGrainStorage`](https://enduringtech.dev/interflare/orleans-marten/src/commit/9126f86c7ea3c999374bca1586d5936c18749b96/src/Orleans.Providers.Marten.Persistence/MartenGrainStorage.cs) which had methods for reading, writing, and clearing individual state documents.
+I started with implementing state persistence, because I figured it would be the easiest. I wasn't wrong - just needed to implement [`IGrainStorage`](https://github.com/interflare/orleans-marten/blob/abd8966f8285728172c9a3f61d99865e60fbccd3/src/Orleans.Providers.Marten.Persistence/MartenGrainStorage.cs) which had methods for reading, writing, and clearing individual state documents.
 
 With most of these Orleans providers, optimistic concurrency is a must. I was able to make use of Marten's [`IVersioned`](https://martendb.io/documents/concurrency.html#using-iversioned) interface on the schema/doc definitions to allow the system to handle all of this for me, in combination with the `IDocumentSession.UpdateExpectedVersion(TDoc, Guid)` method when updating. What I didn't realise is that Marten doesn't offer a similar method for deleting an expected version. Maybe that isn't common? Easily solved by just loading the record and comparing the version manually, though.
 
@@ -47,7 +47,7 @@ Next up was clustering, also known as the Orleans "membership protocol".
 
 Orleans uses a persistence provider to act as a common meeting point for other servers to register themselves as part of a cluster, as well as defining their ports and ip addresses for connection. A number of other servers will connect-up to the new server, as well as advertise the new connections to their other connected servers ('gossip'), so that the network is updated quicker than the configured period for checking with the clustering provider. Servers will also 'suspect' (vote) on their connected servers for liveness through the provider, marking it as dead if it meets the threshhold of votes.
 
-Implementing this was a little more complicated because there were more methods, but also more concepts to get my head around. There were two interfaces to implement: [`IMembershipTable`](https://enduringtech.dev/interflare/orleans-marten/src/commit/9126f86c7ea3c999374bca1586d5936c18749b96/src/Orleans.Providers.Marten.Clustering/MartenClusteringTable.cs) (used by the cluster itself) and [`IGatewayListProvider`](https://enduringtech.dev/interflare/orleans-marten/src/commit/9126f86c7ea3c999374bca1586d5936c18749b96/src/Orleans.Providers.Marten.Clustering/MartenGatewayListProvider.cs) (used by external clients to find their way into the cluster - if used at all).
+Implementing this was a little more complicated because there were more methods, but also more concepts to get my head around. There were two interfaces to implement: [`IMembershipTable`](https://github.com/interflare/orleans-marten/blob/abd8966f8285728172c9a3f61d99865e60fbccd3/src/Orleans.Providers.Marten.Clustering/MartenClusteringTable.cs) (used by the cluster itself) and [`IGatewayListProvider`](https://github.com/interflare/orleans-marten/blob/abd8966f8285728172c9a3f61d99865e60fbccd3/src/Orleans.Providers.Marten.Clustering/MartenGatewayListProvider.cs) (used by external clients to find their way into the cluster - if used at all).
 
 The concepts that got me tripped up were the way clusters were defined - there is a `ServiceId` and a `ClusterId` (previously known as a `DeploymentId`). The service is supposed to be constant, but the cluster id _may_ change. I figured that for a clustering provider library, this would mean there is some degree of 'tenanting' by these identifiers. But was it just for the service id or cluster id? It seemed that some of the existing providers I was looking at had different ideas about this as well - expecting the cluster id to be globally unique, and I think others were looking at just the service id.
 
@@ -57,7 +57,7 @@ While implementing this provider, I figured that there could probably be an API-
 
 ### Reminders
 
-Similar to the other two, the reminder functionality required an implementation of [`IReminderTable`](https://enduringtech.dev/interflare/orleans-marten/src/commit/9126f86c7ea3c999374bca1586d5936c18749b96/src/Orleans.Providers.Marten.Reminders/MartenReminderTable.cs), which had methods for creating/reading/updating the reminder rows.
+Similar to the other two, the reminder functionality required an implementation of [`IReminderTable`](https://github.com/interflare/orleans-marten/blob/abd8966f8285728172c9a3f61d99865e60fbccd3/src/Orleans.Providers.Marten.Reminders/MartenReminderTable.cs), which had methods for creating/reading/updating the reminder rows.
 
 By this point, I understood a fair amount of how the data persistence functionality worked within Orleans, and had a good grasp on how to navigate the code of the built-in providers, so building the reminder implementation wasn't too bad. There was just the one part I wasn't sure about, which was if reminders should persist between deployments (by cluster identifier).
 
@@ -69,4 +69,4 @@ I'm really proud of my little library! And I learned quite a bit about how Orlea
 
 Building this library also makes Orleans more attractive to me as an option when planning out projects, because I really don't want to use Azure or loose SQL scripts. Also, it makes me feel like I don't have to choose between using either system - I can use the best of both.
 
-I've release this implementation as an open-source library, where you can find the [source here](https://enduringtech.dev/interflare/orleans-marten).
+I've release this implementation as an open-source library, where you can find the [source here](https://github.com/interflare/orleans-marten).
