@@ -2,8 +2,6 @@ title: Matt Crook
 languageCode: en-NZ
 baseURL: https://mattcrook.nz/
 
-uglyURLs: true
-enableGitInfo: true
 enableInlineShortcodes: true
 
 pagination:
@@ -34,30 +32,30 @@ ignoreLogs:
 menu:
   main:
     - name: posts
-      url: /posts.html
+      url: /posts/
     - name: projects
-      url: /projects.html
+      url: /projects/
 
   posts:
     - name: Index
-      url: /posts.html
+      url: /posts/
       weight: 1
     - name: Archive
-      url: /archives/posts.html
+      url: /archives/posts/
       weight: 2
     - name: Categories
-      url: /categories.html
+      url: /categories/
       weight: 3
     - name: Series
-      url: /series.html
+      url: /series/
       weight: 4
     - name: Tags
-      url: /tags.html
+      url: /tags/
       weight: 5
 
   footer:
-    - name: Git
-      url: https://enduringtech.dev/matt
+    - name: GitHub
+      url: https://github.com/crookm
     - name: Mastodon
       url: https://mastodon.nz/@matt
 
