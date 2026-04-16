@@ -10,12 +10,17 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="single">
-    <h1 class="title">{{ .Title }}</h1>
+<article class="single" itemscope data-pagefind-body>
+    <h1 class="title" itemprop="name headline"
+        data-pagefind-meta="title"
+        data-section="{{ .Section | singularize | title }}"
+        data-pagefind-filter="section[data-section]">
+        {{ .Title }}
+    </h1>
     {{ partial "frontmatter.html" . }}
 
     {{ if or .Params.repo_url .Params.wiki_url }}
-    <p>
+    <p data-pagefind-ignore>
         {{ with .Params.repo_url }}
         <a href="{{ . }}">View source &rarr;</a>{{ if $.Params.wiki_url }} / {{ end }}
         {{ end }}

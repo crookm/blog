@@ -1,10 +1,14 @@
-<div class="frontmatter">
+<div class="frontmatter" data-pagefind-ignore>
     {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
 
     <div class="properties">
         <p>
             Published on
-            <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}">{{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}</time>
+            <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-0700" }}" itemprop="datePublished"
+                data-pagefind-meta="published:{{ .Date | time.Format "2006-01-02" }}"
+                data-pagefind-sort="published:{{ .Date | time.Format "2006-01-02" }}">
+                {{ .Date | time.Format "Monday, 2 January 2006 at 15:04 MST" }}
+            </time>
         </p>
 
         <p>

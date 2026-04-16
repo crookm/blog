@@ -11,6 +11,8 @@
 {{ partial "common-partials/head-seo.html" . }}
 <meta name="fediverse:creator" content="@matt@mastodon.nz">
 
+<link href="/vendor/pagefind/pagefind-component-ui.css" rel="stylesheet">
+
 {{ with resources.Get "scss/main.scss" }}
     {{ $opts := dict "transpiler" "libsass" "enableSourceMap" true }}
     {{ with . | toCSS $opts }}

@@ -3,8 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="single">
-    <h1 class="title">{{ .Title }}</h1>
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting" data-pagefind-body>
+    <h1 class="title" itemprop="name headline"
+        data-pagefind-meta="title"
+        data-section="{{ .Section | singularize | title }}"
+        data-pagefind-filter="section[data-section]">
+        {{ .Title }}
+    </h1>
     {{ partial "frontmatter.html" . }}
 
     {{ .Content }}
