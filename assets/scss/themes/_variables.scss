@@ -1,0 +1,27 @@
+:root {
+  --color-bg: #fff;
+  --color-text: inherit;
+  --color-muted: #666;
+  --color-border: #c3c3c3;
+  --color-surface: #f2f2f2;
+  --color-surface-text: #666;
+  --color-link: revert;
+  --color-link-visited: revert;
+  --color-thumbnail-bg: revert;
+  --color-thumbnail-border: revert;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #000;
+    --color-text: #dbdbdb;
+    --color-muted: #959595;
+    --color-border: #444;
+    --color-surface: #373737;
+    --color-surface-text: #959595;
+    --color-link: #88f;
+    --color-link-visited: #bc73ff;
+    --color-thumbnail-bg: #222;
+    --color-thumbnail-border: #444;
+  }
+}
