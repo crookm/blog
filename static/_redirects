@@ -1,0 +1,6 @@
+# Hugo had uglyURLs enabled previously; after disabling, canonical paths
+# changed from /path/foo.html to /path/foo/. Redirect old links to the
+# pretty equivalents. https://developers.cloudflare.com/pages/configuration/redirects/
+
+/index.html / 301
+/*.html /:splat/ 301
